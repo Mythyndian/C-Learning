@@ -10,10 +10,11 @@ int char_number(char ch);
 
 int main(void)
 	{
-		char ch;
-		while(1)
+	char ch;
+	printf("-1 - liczba\n(1-25) - litera\n0-niepoprawny znak\n");	
+		while(ch != EOF)
 			{
-				printf("Podaj znak");
+				printf("Podaj znak: ");
 				scanf(" %c",&ch);
 				printf("%d \n",char_number(ch));
 				
@@ -23,7 +24,7 @@ int char_number(char ch)
 	{
 		switch(ch)
 		{
-		case'0':
+		case'0':	
 		case'1':
 		case'2':
 		case'3':
@@ -107,5 +108,6 @@ int char_number(char ch)
 		case 'Z':
 		case 'z': 
 		return 25;break;
+		default: return 0;break;
 		}
 	}
