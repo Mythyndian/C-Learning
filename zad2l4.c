@@ -11,7 +11,7 @@ int main(void)
 	}
 double max(double x,double y)
 {
-	double maks;
+	double maks;		/*Mozna to zastapic przez return x > y ? x : y; */
 	maks = x;
 	if(y>maks)
 		maks = y;
