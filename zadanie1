@@ -1,8 +1,6 @@
 /*Zadanie 1 Kolokwium*/
-
 #include <stdio.h>
-//#include <math.h>
-float approximation_pi(int n);
+double approximation_pi(int n);
 int main(void)
 	{
 		int n;
@@ -13,29 +11,29 @@ int main(void)
 			scanf("%d", &n);
 			if(n <= 0)
 				break;
-			printf("Przyblizenie liczby pi wynosi %.7f.\n\n",approximation_pi(n));	
+			printf("Przyblizenie liczby pi wynosi %.7lf.\n\n",approximation_pi(n));	
 		}	
 		printf("KONIEC");	
 		return 0;
 	}
-float approximation_pi(int n)
+double approximation_pi(int n)
 	{
-		float licznik;
-		float czynnik;
-		float pi = 0;
+		double licznik;
+		double czynnik;
+		double suma = 0; 
 		
-		for(int i = 0; n > i; i++)
-			{
-				for(int j = 1; n >= j ; j++)
+			
+				for(int j = 1 ; n >= j ; j++)
 				{
-					if((j-1) == 0 && (j-1) % 2 == 0)
+					if((j-1) == 0 || (j-1) % 2 == 0)
 						licznik = 1;
 					else
 						licznik = -1;
-					czynnik =	(4*licznik)/(2*n - 1);
-					pi += czynnik; 
-				printf("licznik: %f czynnik: %f  pi: %.2f",licznik,czynnik,pi);
+					czynnik = 4*((licznik)/(2*j - 1));
+					suma += czynnik;
+				
 				}
-			}
-	return pi;	
+			printf("wynik przejscia: %f\n",suma);
+			
+	return suma;	
 	}
