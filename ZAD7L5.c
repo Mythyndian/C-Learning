@@ -1,8 +1,10 @@
+#include <stdio.h>
+#define N 10
 void complete_array(double t[], int N);
 void print_array(double t[], int N);
 int main(void)
 {
-	double tab[10];
+	double tab[N];
 	complete_array(tab,10);
 	print_array(tab,10);
 	return 0;
