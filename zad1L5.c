@@ -12,8 +12,8 @@ int main()
     printf("char: %p\nfloat: %p\nint: %p\ndouble: %p\n\n",c,f,i,d);
 
     printf("char: %c\nfloat: %f\nint: %d\ndouble: %f\n\n",*ch,*fl,*l,*p_d);
-    printf("char: %p\nfloat: %p\nint: %p\ndouble: %p\n\n",*ch,*fl,*l,*p_d);
+    printf("char: %p\nfloat: %p\nint: %p\ndouble: %p\n\n",*ch,*fl,*l,*p_d); 
     printf("char jeszcze raz : %c",ch);
         return 0;
 }
-    
+    //sama zmiennna wskaznikowa bez * zawiera adresz operator *(wyluskania/dereferencji) pozwala na sprawdzenie wartosci pod tym adresem
