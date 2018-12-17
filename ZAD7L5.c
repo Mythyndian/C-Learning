@@ -15,7 +15,7 @@ void complete_array(double t[], int N)
   {
 		printf("Podaj liczbe #%d: ",i+1);
 		scanf("%lf",&t[i]);
-	}
+  }
 }
 void print_array(double t[], int N)
 {
