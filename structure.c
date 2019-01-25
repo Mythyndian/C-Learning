@@ -21,7 +21,8 @@ int main(void) {
 
 }
 void wprowadz(PRODUCT *P,char *t,int size){
-	printf("Podaj id: ");scanf("%d",&P->id);		
+	printf("Podaj id: ");scanf("%d",&P->id);
+	while(getchar() != '\n')
 	printf("Podaj name: ");fgets(t,size,stdin);
 	printf("Podaj weight: ");scanf("%lf",&P->weight);
 	printf("Podaj price: ");scanf("%lf",&P->price);
