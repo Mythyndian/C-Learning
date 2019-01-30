@@ -1,20 +1,17 @@
 #include <stdio.h>
+#include <string.h>
 
-int main(void)
-	{
-	int a,b;
-	int wynik;
-	int reszta = a;
-	printf("a / b:");
-	printf("a:");
-	scanf("%d",&a);
-	printf("b:");	
-	scanf("%d",&b);
-	while (reszta >= b)
-		{
-		reszta = reszta - b;
-		wynik = wynik + 1;
-		}
-	printf("%d , %d",wynik,reszta);
-	return 0;
-	}
+int main ()
+{
+  char str[] ="- This, a sample string.";
+  char * pch;
+  printf ("Splitting string \"%s\" into tokens:\n",str);
+  pch = strtok (str," ,.-");
+  while (pch != NULL)
+  {
+    printf ("%s\n",pch);
+    pch = strtok (NULL, " ,.-");
+  }
+  return 0;
+
+}
