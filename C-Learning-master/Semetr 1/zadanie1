@@ -1,0 +1,39 @@
+/*Zadanie 1 Kolokwium*/
+#include <stdio.h>
+double approximation_pi(int n);
+int main(void)
+	{
+		int n;
+		
+		while(1)
+		{
+			printf("Podaj ilosc czynnikow sumy (<= 0 to koniec): ");
+			scanf("%d", &n);
+			if(n <= 0)
+				break;
+			printf("Przyblizenie liczby pi wynosi %.7lf.\n\n",approximation_pi(n));	
+		}	
+		printf("KONIEC");	
+		return 0;
+	}
+double approximation_pi(int n)
+	{
+		double licznik;
+		double czynnik;
+		double suma = 0; 
+		
+			
+				for(int j = 1 ; n >= j ; j++)
+				{
+					if((j-1) == 0 || (j-1) % 2 == 0)
+						licznik = 1;
+					else
+						licznik = -1;
+					czynnik = 4*((licznik)/(2*j - 1));
+					suma += czynnik;
+				
+				}
+			printf("wynik przejscia: %f\n",suma);
+			
+	return suma;	
+	}
