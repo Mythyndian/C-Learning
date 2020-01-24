@@ -18,7 +18,7 @@ class klasa_pochodna:public klasa_abstrakcji
 	public:
 		void wypisz();
 		klasa_pochodna();
-		klasa_pochodna(float ,char const *);
+		klasa_pochodna(float ,char *);
 		~klasa_pochodna();
 		
 };
@@ -43,12 +43,17 @@ klasa_abstrakcji::~klasa_abstrakcji()
 	std::cout << "destruktor klasa_abstrakcji" << std::endl;
 }
 
+void klasa_abstrakcji::wypisz()
+{
+	std::cout << "a = " << a << std::endl;
+}
+
 klasa_pochodna::klasa_pochodna():klasa_abstrakcji()
 {
 	std::cout << "Konstruktor klasa_pochodna" << std::endl;
 }
 
-klasa_pochodna::klasa_pochodna(float x,char const *input):klasa_abstrakcji(x)
+klasa_pochodna::klasa_pochodna(float x,char *input):klasa_abstrakcji(x)
 {
 	int dlugosc = strlen(input);
 	tekst = new char [dlugosc+1];
@@ -76,7 +81,7 @@ int main()
 {
 	klasa_abstrakcji obiekt(2.3);
 	ref_func(obiekt);
-	klasa_pochodna obiekt2(2.34,"sasdsadasda");
+	klasa_pochodna obiekt2(2.34,(char *)"sasdsadasda");
 	ref_func(obiekt2);
 	return 0;
 }
