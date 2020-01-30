@@ -27,7 +27,7 @@ klasa_abstrakcji::klasa_abstrakcji()
 {
 	std::cout << "Konstruktor klasa_abstrakcji" << std::endl;
 }
-
+l
 klasa_abstrakcji::klasa_abstrakcji(float b)
 {
 	a = b;
@@ -63,7 +63,7 @@ klasa_pochodna::klasa_pochodna(float x,char *input):klasa_abstrakcji(x)
 
 void klasa_pochodna::wypisz()
 {
-	std::cout << "Pole klasy abstrakcji: " << zwroc() << "Pole klasy pochodnej: " << *tekst << std::endl;
+	std::cout << "Pole klasy abstrakcji: " << zwroc() << "Pole klasy pochodnej: " << tekst << std::endl;
 }
 
 klasa_pochodna::~klasa_pochodna()
