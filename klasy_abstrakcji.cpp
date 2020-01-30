@@ -9,7 +9,7 @@ public:
 	float zwroc();
 	klasa_abstrakcji();
 	klasa_abstrakcji(float);
-	~klasa_abstrakcji();
+	virtual ~klasa_abstrakcji();
 };
 
 class klasa_pochodna:public klasa_abstrakcji
