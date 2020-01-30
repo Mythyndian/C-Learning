@@ -80,8 +80,13 @@ void ref_func(klasa_abstrakcji & ref)
 int main()
 {
 	klasa_abstrakcji obiekt(2.3);
-	ref_func(obiekt);
+	//ref_func(obiekt);
+	klasa_abstrakcji *wsk = &obiekt;
+	wsk->wypisz();
 	klasa_pochodna obiekt2(2.34,(char *)"sasdsadasda");
-	ref_func(obiekt2);
+	wsk = &obiekt2;
+	wsk->wypisz();
+	//ref_func(obiekt2);
+	
 	return 0;
 }
